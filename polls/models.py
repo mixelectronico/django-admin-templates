@@ -26,7 +26,7 @@ class Site(models.Model):
 
 
 class Lead(models.Model):
-    id = models.AutoField(db_column='lead_id',primary_key=True)
+    id = models.AutoField(db_column='leads_id',primary_key=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     registered_datetime = models.DateTimeField()
