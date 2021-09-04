@@ -29,7 +29,15 @@
     
     <!-- REQUIRED SCRIPTS -->
     {% block scripts %}
-    
+    <!-- jQuery -->
+            <script type="application/javascript">
+                $(function () {
+                    $('#data').DataTable({
+                        responsive: true,
+                        autoWidth: false
+                    });
+                });
+            </script>
     {% endblock %}
     </body>
 {% endblock %}

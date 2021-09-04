@@ -26,6 +26,7 @@ def sitios(request):
     }
     return render(request, 'polls/sites.html', context)
 
+
 def oportunidades(request):
     oportunidades = Lead.objects.all()
     context = {
@@ -33,9 +34,20 @@ def oportunidades(request):
     }
     return render(request, 'polls/leads.html', context)
 
+
 def documentos(request):
     documentos = Documento.objects.all()
     context = {
         'documents_list' : documentos,
     }
     return render(request, 'polls/documents.html', context)
+
+
+def libros_publicadores(request):
+    libros = Libro.objects.all()
+    publicadores = Publicador.objects.all()
+    context = {
+        'lista_libros' : libros,
+        'lista_publicadores' : publicadores,
+    }
+    return render(request, 'polls/libros_publicadores.html', context)
