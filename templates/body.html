@@ -30,14 +30,18 @@
     <!-- REQUIRED SCRIPTS -->
     {% block scripts %}
     <!-- jQuery -->
-            <script type="application/javascript">
-                $(function () {
-                    $('#data').DataTable({
-                        responsive: true,
-                        autoWidth: false
-                    });
-                });
-            </script>
+    <script type="application/javascript">
+        $(function () {
+            $('.data').DataTable({
+                responsive: true,
+                autoWidth: false,
+                dom: 'lfrtBip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
     {% endblock %}
     </body>
 {% endblock %}
