@@ -58,6 +58,6 @@ class Libro(models.Model):
 
 class Publicador(models.Model):
 	name = models.CharField(max_length=255)
-	libros = models.ManyToManyField(Libro, related_name="publishers")
+	libros = models.ManyToManyField(Libro, related_name="publicadores")
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)

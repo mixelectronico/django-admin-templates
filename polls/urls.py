@@ -9,4 +9,6 @@ urlpatterns = [
     path('oportunidades', views.oportunidades, name='oportunidades'),
     path('documentos', views.documentos, name='documentos'),
     path('libros_publicadores', views.libros_publicadores, name='libros_publicadores'),
+    path('get_publicador', views.get_publicador, name='get_publicador'),
+    path('edit_publicador', views.edit_publicador, name='edit_publicador'),
 ]
